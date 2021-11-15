@@ -1,0 +1,72 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "make obj files",
+			"command":  "/usr/bin/g++",
+			"args": [
+				"-g",
+				"-c",
+				"src/*.cpp",
+				"-m64",
+				"-lSDL2main",
+				"-lSDL2",
+				"-lGL",
+                "-lGLEW",
+				"-I/home/omar/Documents/C++/myEngine Projects/myEngine"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": ["$gcc"],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+
+		{
+			"type": "shell",
+			"label": "move obj files",
+			"command": "mv",
+			"args": [
+				"-f",
+				"*.o",
+				"build/"
+			],
+		},
+
+		{
+			"type": "shell",
+			"label": "go to build",
+			"command": "cd",
+			"args": [
+				"build/",
+			],
+		},
+
+		{
+			"type": "shell",
+			"label": "make lib",
+			"command": "ar",
+			"args": [
+				"rcs",
+				"libmyEngine.a",
+				"*.o"
+			],
+		},
+
+		{
+			"label": "build lib",
+			"dependsOn": [
+				"make obj files",
+				"move obj files",
+				"go to build",
+				"make lib"
+			]
+		}
+	]
+
+
+}
