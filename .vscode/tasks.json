@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "shell",
-			"label": "make obj files",
+			"label": "Make Obj",
 			"command":  "/usr/bin/g++",
 			"args": [
 				"-g",
@@ -14,6 +14,7 @@
 				"-lSDL2",
 				"-lGL",
                 "-lGLEW",
+				"-I/home/omar/Documents/C++/myEngine Projects/", 
 				"-I/home/omar/Documents/C++/myEngine Projects/myEngine"
 			],
 			"options": {
@@ -28,45 +29,19 @@
 
 		{
 			"type": "shell",
-			"label": "move obj files",
-			"command": "mv",
+			"label": "Run Bash",
+			"command": "bash",
 			"args": [
-				"-f",
-				"*.o",
-				"build/"
+				"/home/omar/Documents/C++/myEngine Projects/myEngine/build.sh"
 			],
 		},
-
+	
 		{
-			"type": "shell",
-			"label": "go to build",
-			"command": "cd",
-			"args": [
-				"build/",
-			],
-		},
-
-		{
-			"type": "shell",
-			"label": "make lib",
-			"command": "ar",
-			"args": [
-				"rcs",
-				"libmyEngine.a",
-				"*.o"
-			],
-		},
-
-		{
-			"label": "build lib",
+			"label": "Build lib",
 			"dependsOn": [
-				"make obj files",
-				"move obj files",
-				"go to build",
-				"make lib"
+				"Make Obj",
+				"Run Bash"
 			]
 		}
 	]
-
-
 }

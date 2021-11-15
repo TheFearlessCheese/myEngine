@@ -3,7 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "/home/omar/Documents/C++/myEngine Projects/myEngine/"
+                "/home/omar/Documents/C++/myEngine Projects/myEngine/",
+                "/home/omar/Documents/C++/myEngine Projects/" 
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",
