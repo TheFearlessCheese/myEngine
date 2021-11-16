@@ -15,7 +15,7 @@
 				"-lGL",
                 "-lGLEW",
 				"-I/home/omar/Documents/C++/myEngine Projects/", 
-				"-I/home/omar/Documents/C++/myEngine Projects/myEngine"
+				"-I/home/omar/Documents/C++/myEngine Projects/myEngine/"
 			],
 			"options": {
 				"cwd": "${workspaceFolder}"
@@ -28,19 +28,9 @@
 		},
 
 		{
-			"type": "shell",
-			"label": "Run Bash",
-			"command": "bash",
-			"args": [
-				"/home/omar/Documents/C++/myEngine Projects/myEngine/build.sh"
-			],
-		},
-	
-		{
 			"label": "Build lib",
 			"dependsOn": [
-				"Make Obj",
-				"Run Bash"
+				"Make Obj"
 			]
 		}
 	]

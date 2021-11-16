@@ -4,7 +4,10 @@ namespace myEngine
     {
     //Public
 
-    GLSLProgram::GLSLProgram(): _vertexShaderID(0), _fragmentShaderID(0), _numAttributes(0)
+    GLSLProgram::GLSLProgram(): 
+        _vertexShaderID(0), 
+        _fragmentShaderID(0), 
+        _numAttributes(0)
     {
     }
 
