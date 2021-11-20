@@ -30,9 +30,6 @@ namespace myEngine
             
             return newTexture;
         }
-
-        //TEST
-        std::cout << "Used Cached Texture!\n";
         
         //Return texture
         return mit->second;
