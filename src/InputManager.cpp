@@ -2,7 +2,8 @@
 
 namespace myEngine
 {
-    InputManager::InputManager()
+    InputManager::InputManager():
+        _mouseCoords(0.0f)
     {
     }
     
@@ -18,6 +19,12 @@ namespace myEngine
     void InputManager::releaseKey(unsigned int keyID)
     {
         _keyMap[keyID] = false;
+    }
+    
+    void InputManager::setMouseCoords(float x, float y)
+    {
+        _mouseCoords.x = x;
+        _mouseCoords.y = y;
     }
     
     bool InputManager::isKeyPressed(unsigned int keyID)
