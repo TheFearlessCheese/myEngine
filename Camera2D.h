@@ -25,6 +25,9 @@ namespace myEngine
         float getScale() {return _scale;}
         glm::mat4 getCameraMatrix() {return _cameraMatrix;}
 
+        //Camera Culling
+        bool isBoxInView(const glm::vec2 &position, const glm::vec2 &dimensions);
+
     private:
         int _screenWidth, _screenHeight;
         bool _needsMatrixUpdate;

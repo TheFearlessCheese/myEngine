@@ -59,7 +59,7 @@ namespace myEngine
 		std::printf("*** OpenGL version: %s ***\n", glGetString(GL_VERSION));
 
 		//Background color
-		glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
 		//Set VSync
 		SDL_GL_SetSwapInterval(1);
